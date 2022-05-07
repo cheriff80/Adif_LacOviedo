@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "305098475627",
+    "project_id": "adiflacoviedo",
+    "storage_bucket": "adiflacoviedo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305098475627:android:dec074c47aa1d3a90fc92e",
+        "android_client_info": {
+          "package_name": "com.example.adif_lacoviedo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305098475627-d3jmhsi35kp8b6pk05i3tom4dp21v1f3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAFTy1nFULrmnv5rkS6mIEv6clBcT0daM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305098475627-d3jmhsi35kp8b6pk05i3tom4dp21v1f3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

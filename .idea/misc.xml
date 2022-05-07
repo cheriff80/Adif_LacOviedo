@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/drawable/borde.xml" value="0.243" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout-land/activity_main.xml" value="0.2625" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout/activity_corte_tension.xml" value="0.4" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout/activity_encargado_trabajos.xml" value="0.264" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout/activity_registration.xml" value="0.22530996152201796" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout/activity_work_day.xml" value="0.42025518341307816" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/layout/fragment_date_picker_dialog.xml" value="0.22530996152201796" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
+        <entry key="..\:/Users/esauj/AndroidStudioProjects/Adif_LacOviedo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.136" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

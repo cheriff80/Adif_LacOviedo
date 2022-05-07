@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6DA16F"
+    tools:context=".EncargadoTrabajos">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Horario:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/app_name"
+            android:minHeight="48dp"
+            android:popupElevation="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHorario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvHorario"
+            app:layout_constraintTop_toTopOf="@+id/tvHorario"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvTfnmaEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Telefonema ET:"
+            app:layout_constraintStart_toStartOf="@+id/tvHorario"
+            app:layout_constraintTop_toBottomOf="@+id/spHorario" />
+
+        <EditText
+            android:id="@+id/etNumeroET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:hint="ET"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTfnmaEt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTfnmaEt"
+            app:layout_constraintTop_toTopOf="@+id/tvTfnmaEt" />
+
+        <TextView
+            android:id="@+id/tvTfnmaCtc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Telefonema CTC:"
+            app:layout_constraintStart_toStartOf="@+id/tvTfnmaEt"
+            app:layout_constraintTop_toBottomOf="@+id/etNumeroET" />
+
+        <EditText
+            android:id="@+id/etNumeroCTC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:hint="CTC"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTfnmaCtc"
+            app:layout_constraintEnd_toEndOf="@+id/etNumeroET"
+            app:layout_constraintStart_toStartOf="@+id/etNumeroET"
+            app:layout_constraintTop_toTopOf="@+id/tvTfnmaCtc" />
+
+        <TextView
+            android:id="@+id/tvNombreRc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nombre RC:"
+            app:layout_constraintStart_toStartOf="@+id/tvTfnmaCtc"
+            app:layout_constraintTop_toBottomOf="@+id/etNumeroCTC" />
+
+        <EditText
+            android:id="@+id/etNombreRc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNombreRc"
+            app:layout_constraintEnd_toEndOf="@+id/etNumeroCTC"
+            app:layout_constraintStart_toStartOf="@+id/etNumeroCTC"
+            app:layout_constraintTop_toTopOf="@+id/tvNombreRc" />
+
+        <TextView
+            android:id="@+id/tvTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Lugar de trabajo:"
+            app:layout_constraintStart_toStartOf="@+id/tvNombreRc"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreRc" />
+
+        <EditText
+            android:id="@+id/etLugarTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Lugar Trabajo"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrabajo" />
+
+        <TextView
+            android:id="@+id/tvEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Empresa:"
+            app:layout_constraintStart_toStartOf="@+id/tvTrabajo"
+            app:layout_constraintTop_toBottomOf="@+id/etLugarTrabajo" />
+
+        <EditText
+            android:id="@+id/etEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Empresa"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmpresa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btEncargadoTrabajos"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#0D6510"
+        android:text="GUARDAR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:rippleColor="#FFFFFF" />
+</androidx.constraintlayout.widget.ConstraintLayout>

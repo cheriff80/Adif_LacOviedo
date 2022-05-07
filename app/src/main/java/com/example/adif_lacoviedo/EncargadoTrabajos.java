@@ -39,7 +39,7 @@ public class EncargadoTrabajos extends AppCompatActivity {
         etEmpresa = (EditText) findViewById(R.id.etEmpresa);
 
         //Button declaration
-        btGuardar = (Button) findViewById(R.id.btEncargadoTrabajos);
+        btGuardar = (Button) findViewById(R.id.btCorteTension);
 
     }
 

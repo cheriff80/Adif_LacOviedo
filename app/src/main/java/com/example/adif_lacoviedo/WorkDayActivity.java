@@ -20,8 +20,9 @@ import java.util.Date;
 public class WorkDayActivity extends AppCompatActivity {
 
     private EditText etDate;
-    private Switch swEncargadoTrabajos;
+    private Switch swEncargadoTrabajos,swCorteTension,swConduccion;
     private TextView tvEtHorario,tvEtTelefonemaEt,tvEtTelefonemaCtc,tvNombreCtc,tvEtTrabajo,tvEtEmpresa;
+    private TextView tvCtHoraInicio,tvCtHoraFin,tvCtLugar,tvCtTrabajo;
 
     private Dia claseDia;
     private int mes,dia,anio;
@@ -35,20 +36,31 @@ public class WorkDayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_day);
 
-        etDate = (EditText) findViewById(R.id.etFecha);
-        swEncargadoTrabajos = (Switch) findViewById(R.id.swEt);
+        //Class Day
         claseDia = new Dia();
 
+        etDate = (EditText) findViewById(R.id.etFecha);
+        swEncargadoTrabajos = (Switch) findViewById(R.id.swEt);
+        swCorteTension = (Switch) findViewById(R.id.swCorteTension);
+        swConduccion = (Switch) findViewById(R.id.swConduccion);
+
+        //Text views Encargado Trabajos
         tvEtHorario = (TextView) findViewById(R.id.tvEtHorario);
         tvEtTelefonemaEt = (TextView) findViewById(R.id.tvEtTlfEt);
         tvEtTelefonemaCtc = (TextView) findViewById(R.id.tvEtTlfCtc);
         tvNombreCtc = (TextView) findViewById(R.id.tvEtNombreCtc);
         tvEtTrabajo  =(TextView) findViewById(R.id.tvEtTrabajo);
         tvEtEmpresa = (TextView) findViewById(R.id.tvEtEmpresa);
+        //Text Views for Corte de Tensión
+        tvCtHoraInicio = (TextView) findViewById(R.id.tvCtHoraInicio);
+        tvCtHoraFin = (TextView) findViewById(R.id.tvCtHoraFin);
+        tvCtLugar = (TextView) findViewById(R.id.tvCtLugar);
+        tvCtTrabajo = (TextView) findViewById(R.id.tvCtTrabajo);
 
-        //cast bundle from EncargadoTrabajos
+        //cast bundle
         Bundle b = this.getIntent().getExtras();
         if (b != null){
+            //If comes from activity EncargadoTrabajos
             if(b.getBoolean("EncargadoTrabajos")){
 
                 //Change text views
@@ -67,6 +79,22 @@ public class WorkDayActivity extends AppCompatActivity {
                 claseDia.setLugar(b.getString("LugarTrabajo"));
                 claseDia.setEmpresa(b.getString("Empresa"));
                 claseDia.setEncargadoTrabajos(true);
+            }
+            if(b.getBoolean("CorteTension")){
+
+                swCorteTension.setChecked(true);
+                tvCtHoraInicio.setText(b.getString("HoraInicio"));
+                tvCtHoraFin.setText(b.getString("HoraFin"));
+                tvCtLugar.setText(b.getString("Lugar"));
+                tvCtTrabajo.setText(b.getString("Trabajo"));
+                //Class Day
+                claseDia.setHoraInic(b.getString("HoraInicio"));
+                claseDia.setHoraFin(b.getString("HoraFin"));
+                claseDia.setLugar(b.getString("Lugar"));
+                claseDia.setTrabajo(b.getString("Trabajo"));
+                claseDia.setCorteTension(true);
+
+
             }
 
         }
@@ -114,6 +142,27 @@ public class WorkDayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //Switch Corte Tension
+        swCorteTension.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Intent intent = new Intent(WorkDayActivity.this, CorteTension.class);
+                startActivity(intent);
+            }
+        });
+
+        //Switch conduccion
+        swConduccion.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                claseDia.setConduccion(true);
+            }
+        });
+
+
+
+
 
     }
 
